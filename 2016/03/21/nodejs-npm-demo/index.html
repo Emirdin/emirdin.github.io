@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Node.js安装和NPM包管理器使用 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="在Windows上安装NodeNode从0.6.0版本开始支持Windows，要在Windows上安装Node，只用从nodejs下载node-v*.msi，然后双击运行即可，然后你可能会遇到安全对话框。一直下一步完事儿 运行Node现在已经可以运行Node了，你可以先简单的体验一下Node的命令行交互界面（CLI:command-line interface），只需要调用Node可执行文件就">
+<meta name="keywords" content="tools,nodejs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node.js安装和NPM包管理器使用">
+<meta property="og:url" content="http://yoursite.com/2016/03/21/nodejs-npm-demo/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="在Windows上安装NodeNode从0.6.0版本开始支持Windows，要在Windows上安装Node，只用从nodejs下载node-v*.msi，然后双击运行即可，然后你可能会遇到安全对话框。一直下一步完事儿 运行Node现在已经可以运行Node了，你可以先简单的体验一下Node的命令行交互界面（CLI:command-line interface），只需要调用Node可执行文件就">
+<meta property="og:image" content="http://file02.16sucai.com/d/file/2015/0323/9eee164ffcbdd704cad941a1df6ce350.jpg">
+<meta property="og:updated_time" content="2017-04-03T06:17:55.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Node.js安装和NPM包管理器使用">
+<meta name="twitter:description" content="在Windows上安装NodeNode从0.6.0版本开始支持Windows，要在Windows上安装Node，只用从nodejs下载node-v*.msi，然后双击运行即可，然后你可能会遇到安全对话框。一直下一步完事儿 运行Node现在已经可以运行Node了，你可以先简单的体验一下Node的命令行交互界面（CLI:command-line interface），只需要调用Node可执行文件就">
+<meta name="twitter:image" content="http://file02.16sucai.com/d/file/2015/0323/9eee164ffcbdd704cad941a1df6ce350.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">John Doe</a></h1>
+        </hgroup>
+
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/Home">博客首页</a></li>
+                        
+                            <li><a href="/works">作品展示</a></li>
+                        
+                            <li><a href="/about">留言打卡</a></li>
+                        
+                            <li><a href="/FrontEndGuide">前端导航</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=PAkNDgsKBQ4MCnxNTRJfU1E" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/luuman" title="github">github</a>
+                            
+                                <a class="fl zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+                            
+                                <a class="fl weibo" target="_blank" href="#" title="weibo">weibo</a>
+                            
+                                <a class="fl google" target="_blank" href="#" title="google">google</a>
+                            
+                                <a class="fl twitter" target="_blank" href="#" title="twitter">twitter</a>
+                            
+                                <a class="fl linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/Nginx/" style="font-size: 12px;">Nginx</a> <a href="/tags/NodeJS/" style="font-size: 10px;">NodeJS</a> <a href="/tags/Ubuntu/" style="font-size: 12px;">Ubuntu</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/atom/" style="font-size: 10px;">atom</a> <a href="/tags/babel/" style="font-size: 10px;">babel</a> <a href="/tags/c/" style="font-size: 12px;">c</a> <a href="/tags/cordova/" style="font-size: 10px;">cordova</a> <a href="/tags/expressjs/" style="font-size: 10px;">expressjs</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/http/" style="font-size: 12px;">http</a> <a href="/tags/image/" style="font-size: 12px;">image</a> <a href="/tags/java/" style="font-size: 14px;">java</a> <a href="/tags/mysql/" style="font-size: 14px;">mysql</a> <a href="/tags/nodejs/" style="font-size: 16px;">nodejs</a> <a href="/tags/nwjs/" style="font-size: 12px;">nwjs</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/reactjs/" style="font-size: 10px;">reactjs</a> <a href="/tags/tkinter/" style="font-size: 18px;">tkinter</a> <a href="/tags/tools/" style="font-size: 18px;">tools</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://luuman.github.io/">name</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">纯海迷、爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更爱游离于错综复杂的编码与逻辑中</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">John Doe</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">John Doe</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/Home">博客首页</a></li>
+                
+                    <li><a href="/works">作品展示</a></li>
+                
+                    <li><a href="/about">留言打卡</a></li>
+                
+                    <li><a href="/FrontEndGuide">前端导航</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=PAkNDgsKBQ4MCnxNTRJfU1E" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/luuman" title="github">github</a>
+                    
+                        <a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+                    
+                        <a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+                    
+                        <a class="google" target="_blank" href="#" title="google">google</a>
+                    
+                        <a class="twitter" target="_blank" href="#" title="twitter">twitter</a>
+                    
+                        <a class="linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-nodejs-npm-demo" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/21/nodejs-npm-demo/" class="article-date">
+      <time datetime="2016-03-21T13:43:52.000Z" itemprop="datePublished">2016-03-21</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Node.js安装和NPM包管理器使用
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/tools/">tools</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tools/">tools</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><img src="http://file02.16sucai.com/d/file/2015/0323/9eee164ffcbdd704cad941a1df6ce350.jpg" alt="demo"></p>
+<hr>
+<h3 id="在Windows上安装Node"><a href="#在Windows上安装Node" class="headerlink" title="在Windows上安装Node"></a>在Windows上安装Node</h3><p>Node从0.6.0版本开始支持Windows，要在Windows上安装Node，只用从<a href="Http://nodejs.org/#download" target="_blank" rel="external">nodejs</a>下载node-v*.msi，然后双击运行即可，然后你可能会遇到安全对话框。<br>一直下一步完事儿</p>
+<h3 id="运行Node"><a href="#运行Node" class="headerlink" title="运行Node"></a>运行Node</h3><p>现在已经可以运行Node了，你可以先简单的体验一下Node的命令行交互界面（CLI:command-line interface），只需要调用Node可执行文件就行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ node</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&gt; console.log(&apos;Hello World!&apos;);</div><div class="line"></div><div class="line">Hello World!</div><div class="line"></div><div class="line">&gt; undefined</div></pre></td></tr></table></figure>
+<h3 id="安装模块"><a href="#安装模块" class="headerlink" title="安装模块"></a>安装模块</h3><p>全局模式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install –g &lt;package name&gt;</div></pre></td></tr></table></figure></p>
+<p>本地模式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install &lt;package name&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="卸载模块"><a href="#卸载模块" class="headerlink" title="卸载模块"></a>卸载模块</h3><p>全局模式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm uninstall -g &lt;package name&gt;</div></pre></td></tr></table></figure></p>
+<p>本地模式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm uninstall &lt;package name&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="更新模块"><a href="#更新模块" class="headerlink" title="更新模块"></a>更新模块</h3><p>全局模式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm update -g &lt;package name&gt;</div></pre></td></tr></table></figure></p>
+<p>本地模式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm update &lt;package name&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="使用package-json文件定义依赖关系"><a href="#使用package-json文件定义依赖关系" class="headerlink" title="使用package.json文件定义依赖关系"></a>使用package.json文件定义依赖关系</h3><p>package.json是一个JSON格式的文件，包含了一系列属性，但是如果仅仅是为了说明程序的依赖关系，则只用一个dependencies属性就行。比如，一个叫MyApp的应用程序依赖sax,nano和request模块，只需要建立这样一个package.json：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm init</div></pre></td></tr></table></figure></p>
+<h3 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install</div></pre></td></tr></table></figure>
+<h3 id="更新依赖"><a href="#更新依赖" class="headerlink" title="更新依赖"></a>更新依赖</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm update</div></pre></td></tr></table></figure>
+
+      
+      
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang" title="打赏，支持一下">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()" title="关闭">×</a>
+            <div class="shang_tit">
+              <p>纯属好玩</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+            </div>
+              <div class="pay_explain">扫码打赏，你说多少就多少</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝" /></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixin.png" alt="微信" /></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/03/21/nodejs-npm-demo/">Node.js安装和NPM包管理器使用</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 John Doe 的个人博客">John Doe</a></p>
+        <p><span>发布时间:</span>2016年03月21日 - 21时43分</p>
+        <p><span>最后更新:</span>2017年04月03日 - 14时17分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/03/21/nodejs-npm-demo/" title="Node.js安装和NPM包管理器使用">http://yoursite.com/2016/03/21/nodejs-npm-demo/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/21/nodejs-npm-demo/　　作者: John Doe" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2016/03/01/tools-hexo-demo/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          built a personal blog with hexo
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/04/06/react-webpack-babel/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">react-webpack-babel环境搭建</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#在Windows上安装Node"><span class="toc-number">1.</span> <span class="toc-text">在Windows上安装Node</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行Node"><span class="toc-number">2.</span> <span class="toc-text">运行Node</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装模块"><span class="toc-number">3.</span> <span class="toc-text">安装模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#卸载模块"><span class="toc-number">4.</span> <span class="toc-text">卸载模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更新模块"><span class="toc-number">5.</span> <span class="toc-text">更新模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用package-json文件定义依赖关系"><span class="toc-number">6.</span> <span class="toc-text">使用package.json文件定义依赖关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装依赖"><span class="toc-number">7.</span> <span class="toc-text">安装依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更新依赖"><span class="toc-number">8.</span> <span class="toc-text">更新依赖</span></a></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2016/03/21/nodejs-npm-demo/" data-title="Node.js安装和NPM包管理器使用" data-url="http://yoursite.com/2016/03/21/nodejs-npm-demo/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"null"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2016/03/01/tools-hexo-demo/" title="上一篇: built a personal blog with hexo">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2016/04/06/react-webpack-babel/" title="下一篇: react-webpack-babel环境搭建">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/04/06/tools-github-demo/">开源项目托管GitHub入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/06/tools-git-demo/">本地仓库管理Git入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/28/nodejs-http-request/">nodejs用superagent发http请求</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/15/c-and-ppm-two/">用c语言画ppm图片（二）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/14/c-and-ppm-one/">用c语言画ppm图片（一）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/20/java-http-request/">java发起http请求</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/26/nginx-on-ubuntu-one/">Nginx在Ubuntu上的基本知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/26/nginx-on-ubuntu-two/">Ubuntu上配置Nginx服务器</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/02/php-upload-download/">php简单文件上传和下载</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/02/android-webview-demo/">android的webview和back键</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/30/nodejs-mysql-connection/">nodejs操作mysql</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/30/java-mysql-connection/">java操作mysql</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/29/python-mysql-connection/">python连接mysql</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-events/">python模块tkinter的events</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-widget/">python模块tkinter的widget讲解</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-menu/">python-tkinter-menu</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-images/">python模块tkinter的图片运用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-variables/">python模块tkinter的variable</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-window-methods/">python模块tkinter的window-methods</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-komponent-methods/">python模块tkinter的komponent-methods</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-komponent-canvas/">python-tkinter-komponent-canvas</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-komponents-two/">python模块tkinter的常用控件2</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/09/python-tkinter-komponents-one/">python模块tkinter的常用控件1</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/09/python-tkinter-demo/">用python的tkinter模块开发桌面应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/17/tools-atom-plugins/">atom编辑器常用插件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/17/nodejs-amazing-projects/">12个令人惊讶的NodeJS开源项目</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/17/tools-nwjs-package/">nwjs项目package.json文件详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/17/tools-nwjs-demo/">nwjs快速入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/17/tools-cordova-demo/">cordova快速入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/17/nodejs-express-demo/">expressjs框架的安装和使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/06/react-webpack-babel/">react-webpack-babel环境搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/21/nodejs-npm-demo/">Node.js安装和NPM包管理器使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/01/tools-hexo-demo/">built a personal blog with hexo</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2017 John Doe
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >海贼到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>

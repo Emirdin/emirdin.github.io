@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>用python的tkinter模块开发桌面应用 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="原文 1. 安装pythonclick here to download双击安装（我用的是3.5.1版本） 2. 运行脚本创建 trinker.py写以下代码双击运行代码 3. 入门1234567# import the tkinter core packageimport tkinter# create a root window with tkinterroot = tkinter.Tk()#">
+<meta name="keywords" content="python,tkinter">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用python的tkinter模块开发桌面应用">
+<meta property="og:url" content="http://yoursite.com/2016/05/09/python-tkinter-demo/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="原文 1. 安装pythonclick here to download双击安装（我用的是3.5.1版本） 2. 运行脚本创建 trinker.py写以下代码双击运行代码 3. 入门1234567# import the tkinter core packageimport tkinter# create a root window with tkinterroot = tkinter.Tk()#">
+<meta property="og:image" content="http://file01.16sucai.com/d/file/2012/0709/20120709092203555.jpg">
+<meta property="og:updated_time" content="2017-04-03T06:17:55.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="用python的tkinter模块开发桌面应用">
+<meta name="twitter:description" content="原文 1. 安装pythonclick here to download双击安装（我用的是3.5.1版本） 2. 运行脚本创建 trinker.py写以下代码双击运行代码 3. 入门1234567# import the tkinter core packageimport tkinter# create a root window with tkinterroot = tkinter.Tk()#">
+<meta name="twitter:image" content="http://file01.16sucai.com/d/file/2012/0709/20120709092203555.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">John Doe</a></h1>
+        </hgroup>
+
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/Home">博客首页</a></li>
+                        
+                            <li><a href="/works">作品展示</a></li>
+                        
+                            <li><a href="/about">留言打卡</a></li>
+                        
+                            <li><a href="/FrontEndGuide">前端导航</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=PAkNDgsKBQ4MCnxNTRJfU1E" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/luuman" title="github">github</a>
+                            
+                                <a class="fl zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+                            
+                                <a class="fl weibo" target="_blank" href="#" title="weibo">weibo</a>
+                            
+                                <a class="fl google" target="_blank" href="#" title="google">google</a>
+                            
+                                <a class="fl twitter" target="_blank" href="#" title="twitter">twitter</a>
+                            
+                                <a class="fl linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/Nginx/" style="font-size: 12px;">Nginx</a> <a href="/tags/NodeJS/" style="font-size: 10px;">NodeJS</a> <a href="/tags/Ubuntu/" style="font-size: 12px;">Ubuntu</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/atom/" style="font-size: 10px;">atom</a> <a href="/tags/babel/" style="font-size: 10px;">babel</a> <a href="/tags/c/" style="font-size: 12px;">c</a> <a href="/tags/cordova/" style="font-size: 10px;">cordova</a> <a href="/tags/expressjs/" style="font-size: 10px;">expressjs</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/http/" style="font-size: 12px;">http</a> <a href="/tags/image/" style="font-size: 12px;">image</a> <a href="/tags/java/" style="font-size: 14px;">java</a> <a href="/tags/mysql/" style="font-size: 14px;">mysql</a> <a href="/tags/nodejs/" style="font-size: 16px;">nodejs</a> <a href="/tags/nwjs/" style="font-size: 12px;">nwjs</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/reactjs/" style="font-size: 10px;">reactjs</a> <a href="/tags/tkinter/" style="font-size: 18px;">tkinter</a> <a href="/tags/tools/" style="font-size: 18px;">tools</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://luuman.github.io/">name</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">纯海迷、爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更爱游离于错综复杂的编码与逻辑中</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">John Doe</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">John Doe</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/Home">博客首页</a></li>
+                
+                    <li><a href="/works">作品展示</a></li>
+                
+                    <li><a href="/about">留言打卡</a></li>
+                
+                    <li><a href="/FrontEndGuide">前端导航</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=PAkNDgsKBQ4MCnxNTRJfU1E" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/luuman" title="github">github</a>
+                    
+                        <a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+                    
+                        <a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+                    
+                        <a class="google" target="_blank" href="#" title="google">google</a>
+                    
+                        <a class="twitter" target="_blank" href="#" title="twitter">twitter</a>
+                    
+                        <a class="linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-python-tkinter-demo" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/09/python-tkinter-demo/" class="article-date">
+      <time datetime="2016-05-09T14:36:37.000Z" itemprop="datePublished">2016-05-09</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      用python的tkinter模块开发桌面应用
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/python/">python</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tkinter/">tkinter</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><img src="http://file01.16sucai.com/d/file/2012/0709/20120709092203555.jpg" alt="demo"><br><a href="http://www.cnblogs.com/kaituorensheng/p/3287652.html" target="_blank" rel="external">原文</a></p>
+<h2 id="1-安装python"><a href="#1-安装python" class="headerlink" title="1. 安装python"></a>1. 安装python</h2><p>click <a href="https://www.python.org/downloads/" target="_blank" rel="external">here</a> to download<br>双击安装（我用的是3.5.1版本）</p>
+<h2 id="2-运行脚本"><a href="#2-运行脚本" class="headerlink" title="2. 运行脚本"></a>2. 运行脚本</h2><p>创建 trinker.py<br>写以下代码<br>双击运行代码</p>
+<h2 id="3-入门"><a href="#3-入门" class="headerlink" title="3. 入门"></a>3. 入门</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># import the tkinter core package</span></div><div class="line"><span class="keyword">import</span> tkinter</div><div class="line"><span class="comment"># create a root window with tkinter</span></div><div class="line">root = tkinter.Tk()</div><div class="line"><span class="comment">## start the event loop</span></div><div class="line"><span class="comment">## (actually i don't know what does it look like in python at this time)</span></div><div class="line">root.mainloop()</div></pre></td></tr></table></figure>
+<h2 id="4-窗口参数"><a href="#4-窗口参数" class="headerlink" title="4. 窗口参数"></a>4. 窗口参数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># print (root.keys) # printing the all options</span></div><div class="line"><span class="comment"># root['key'] = value</span></div><div class="line">root[<span class="string">'bg'</span>] = <span class="string">'black'</span> <span class="comment"># same to background</span></div><div class="line"><span class="comment"># relief</span></div><div class="line"><span class="comment"># screen</span></div><div class="line"><span class="comment"># use</span></div><div class="line"><span class="comment"># colormap</span></div><div class="line"><span class="comment"># container</span></div><div class="line">root[<span class="string">'cursor'</span>] = <span class="string">'abc.png'</span> <span class="comment"># cursor image</span></div><div class="line">root[<span class="string">'bd'</span>] = <span class="string">'2'</span> <span class="comment"># same to borderwidth</span></div><div class="line">root[<span class="string">'height'</span>] = <span class="string">'400'</span> <span class="comment"># height</span></div><div class="line"><span class="comment"># highlightbackground # 部件具有焦点时的亮点区域的背景颜色.</span></div><div class="line"><span class="comment"># highlightcolor # 前景色的亮点区域，部件具有焦点时.</span></div><div class="line"><span class="comment"># highlightthickness # 焦点时边框宽度</span></div><div class="line">root[<span class="string">'padx'</span>] = <span class="string">'10'</span> <span class="comment"># inner padding x</span></div><div class="line">root[<span class="string">'pady'</span>] = <span class="string">'10'</span> <span class="comment"># inner padding y</span></div><div class="line"><span class="comment"># takefocus # 获取焦点的键盘定义</span></div><div class="line"><span class="comment"># visual</span></div><div class="line">root[<span class="string">'width'</span>] = <span class="string">'400'</span> <span class="comment"># width</span></div><div class="line">root[<span class="string">'menu'</span>] = myMenu <span class="comment"># add myMenu</span></div></pre></td></tr></table></figure>
+<h2 id="5-窗口函数"><a href="#5-窗口函数" class="headerlink" title="5. 窗口函数"></a>5. 窗口函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># set the window's title</span></div><div class="line">root.title(<span class="string">"this is a window created with tkinter in python"</span>)</div><div class="line"><span class="comment"># set the size of the window(WxH+X+Y)</span></div><div class="line">root.geometry(<span class="string">'600x500+10+20'</span>);</div><div class="line"><span class="comment"># set the resizability</span></div><div class="line">root.resizable(width=<span class="keyword">True</span>,height=<span class="keyword">False</span>)</div><div class="line"><span class="comment"># icon of the window</span></div><div class="line">root.iconbitmap(<span class="string">'gif/003.ico'</span>)</div><div class="line"><span class="comment"># enter the event loop</span></div><div class="line">root.mainloop()</div></pre></td></tr></table></figure>
+<h2 id="7-几何布局之pack"><a href="#7-几何布局之pack" class="headerlink" title="7. 几何布局之pack"></a>7. 几何布局之pack</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">elem.pack(**options)</div><div class="line"><span class="comment"># same ad pack</span></div><div class="line">pack_configure()</div><div class="line"><span class="comment"># remome , but not destroy , can display again with pack()</span></div><div class="line">pack_forget()</div><div class="line"><span class="comment"># Returns a dictionary containing the current packer options.</span></div><div class="line">pack_info()</div><div class="line"><span class="comment"># (Manager method) Controls geometry propagation. If enabled, the manager widget will be resized if not large enough to hold all the child widgets.</span></div><div class="line">pack_propagate(flag)</div><div class="line"><span class="comment"># (Manager method) Returns a list of all child (“slave”) widgets managed by the packer for this widget.Returns: A list of child widgets.</span></div><div class="line">pack_slaves()</div><div class="line"><span class="comment"># Where the widget is placed inside the packing box. Default is CENTER.</span></div><div class="line">anchor = center,x,e,nw,ne,se,sw,s,n</div><div class="line"><span class="comment"># Specifies whether the widgets should be expanded to fill any extra space in the geometry master. If false (default), the widget is not expanded.</span></div><div class="line">expand = <span class="keyword">True</span>,false</div><div class="line"><span class="comment"># Specifies whether the widget should occupy all the space provided to it by the master.</span></div><div class="line">fill = none,both,x,y</div><div class="line"><span class="comment"># Pack this widget inside the given widget.</span></div><div class="line"><span class="keyword">in</span> =</div><div class="line"><span class="comment"># inner pading</span></div><div class="line">ipadx = <span class="number">0</span></div><div class="line">ipady = <span class="number">0</span></div><div class="line"><span class="comment"># outer padding</span></div><div class="line">padx = <span class="number">0</span></div><div class="line">pady = <span class="number">0</span></div><div class="line"><span class="comment"># Specifies which side to pack the widget against.</span></div><div class="line">side = left,right,top,bottom</div></pre></td></tr></table></figure>
+<h2 id="7-几何布局之grid"><a href="#7-几何布局之grid" class="headerlink" title="7. 几何布局之grid"></a>7. 几何布局之grid</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">elem.grid(**options)</div><div class="line"><span class="comment"># Returns a list of the “slave” widgets managed by this widget.</span></div><div class="line">grid_slaves(row = <span class="string">'none'</span>, column = <span class="string">'none'</span>)</div><div class="line"><span class="comment"># Returns the current grid size for the geometry manager attached to this widget.</span></div><div class="line">grid_size()</div><div class="line"><span class="comment"># Set options for a row,column of cells.</span></div><div class="line"><span class="comment"># padsize=,pad=,weight=</span></div><div class="line">elem.grid_rowconfigure(index, **options)</div><div class="line">grid_columnconfigure(index, **options)</div><div class="line"><span class="comment"># Enables or disables geometry propagation.</span></div><div class="line">girid_propagate(flag) <span class="keyword">True</span>,<span class="keyword">False</span></div><div class="line"><span class="comment"># Returns the grid cell under (or closest to) a given pixel.</span></div><div class="line">grid_location(x, y)</div><div class="line"><span class="comment"># Return a dictionary containing the current cell options for the cell used by this widget.</span></div><div class="line">grid_info()</div><div class="line"><span class="comment"># Remove this widget from the grid manager. The widget is not destroyed, and can be displayed again by grid or any other manager.</span></div><div class="line">grid_forget()</div><div class="line"><span class="comment"># Same as grid.</span></div><div class="line">grid_configure(**options) [<span class="comment">#]</span></div><div class="line"><span class="comment"># The grid_bbox method.</span></div><div class="line">grid_bbox(column=<span class="keyword">None</span>, row=<span class="keyword">None</span>, col2=<span class="keyword">None</span>, row2=<span class="keyword">None</span>)</div><div class="line"><span class="comment"># column row number</span></div><div class="line">column = <span class="number">1</span></div><div class="line">row = <span class="number">2</span></div><div class="line"><span class="comment"># If given, indicates that the widget cell should span multiple columns or rows. The default is 1.</span></div><div class="line">columnspan = <span class="number">2</span></div><div class="line">rowspan = <span class="number">3</span></div><div class="line"><span class="comment"># Place widget inside to the given widget.</span></div><div class="line"><span class="keyword">in</span> =</div><div class="line">in_ = <span class="comment"># same as in</span></div><div class="line"><span class="comment"># the inner paddings</span></div><div class="line">ipadx =</div><div class="line">ipady =</div><div class="line"><span class="comment"># the outer paddings</span></div><div class="line">padx =</div><div class="line">pady =</div><div class="line"><span class="comment"># Defines how to expand the widget if the resulting cell is larger than the widget itself.</span></div><div class="line">sticky = w,e,n,s,se,we,ne,nw</div></pre></td></tr></table></figure>
+<h2 id="7-几何布局之place"><a href="#7-几何布局之place" class="headerlink" title="7. 几何布局之place"></a>7. 几何布局之place</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">elem.place(**options)</div><div class="line"><span class="comment"># Same as place.</span></div><div class="line">place_configure(**options)</div><div class="line"><span class="comment"># The place_forget method.</span></div><div class="line">place_forget()</div><div class="line"><span class="comment"># The place_info method.</span></div><div class="line">place_info()</div><div class="line"><span class="comment"># The place_slaves method.</span></div><div class="line">place_slaves()</div><div class="line">Same <span class="keyword">as</span> place_slaves.</div><div class="line">slaves()</div></pre></td></tr></table></figure>
+<h2 id="8-常用颜色定义"><a href="#8-常用颜色定义" class="headerlink" title="8. 常用颜色定义"></a>8. 常用颜色定义</h2><ul>
+<li><p>bg: 背景颜色</p>
+</li>
+<li><p>fg：前景颜色</p>
+</li>
+<li><p>activebackground: 当widget是活跃widget的背景颜色.</p>
+</li>
+<li><p>activeforeground:小部件时，部件是活跃的前景色.</p>
+</li>
+<li><p>background: widget的背景颜色。这也可以代表ASBG.</p>
+</li>
+<li><p>disabledforeground: 前景色的部件，当部件被禁用.</p>
+</li>
+<li><p>foreground: widget的前景色。这也可以表示为FG.</p>
+</li>
+<li><p>highlightbackground: 部件具有焦点时的亮点区域的背景颜色.</p>
+</li>
+<li><p>highlightcolor: 前景色的亮点区域，部件具有焦点时.</p>
+</li>
+<li><p>selectbackground: widget的所选项目的背景颜色.</p>
+</li>
+<li><p>selectforeground: 前景色为widget的选定项目.</p>
+</li>
+</ul>
+
+      
+      
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang" title="打赏，支持一下">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()" title="关闭">×</a>
+            <div class="shang_tit">
+              <p>纯属好玩</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+            </div>
+              <div class="pay_explain">扫码打赏，你说多少就多少</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝" /></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixin.png" alt="微信" /></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/05/09/python-tkinter-demo/">用python的tkinter模块开发桌面应用</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 John Doe 的个人博客">John Doe</a></p>
+        <p><span>发布时间:</span>2016年05月09日 - 22时36分</p>
+        <p><span>最后更新:</span>2017年04月03日 - 14时17分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/05/09/python-tkinter-demo/" title="用python的tkinter模块开发桌面应用">http://yoursite.com/2016/05/09/python-tkinter-demo/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/05/09/python-tkinter-demo/　　作者: John Doe" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2016/04/17/tools-atom-plugins/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          atom编辑器常用插件
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/05/09/python-tkinter-komponents-one/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python模块tkinter的常用控件1</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-安装python"><span class="toc-number">1.</span> <span class="toc-text">1. 安装python</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-运行脚本"><span class="toc-number">2.</span> <span class="toc-text">2. 运行脚本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-入门"><span class="toc-number">3.</span> <span class="toc-text">3. 入门</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-窗口参数"><span class="toc-number">4.</span> <span class="toc-text">4. 窗口参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-窗口函数"><span class="toc-number">5.</span> <span class="toc-text">5. 窗口函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-几何布局之pack"><span class="toc-number">6.</span> <span class="toc-text">7. 几何布局之pack</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-几何布局之grid"><span class="toc-number">7.</span> <span class="toc-text">7. 几何布局之grid</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-几何布局之place"><span class="toc-number">8.</span> <span class="toc-text">7. 几何布局之place</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-常用颜色定义"><span class="toc-number">9.</span> <span class="toc-text">8. 常用颜色定义</span></a></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2016/05/09/python-tkinter-demo/" data-title="用python的tkinter模块开发桌面应用" data-url="http://yoursite.com/2016/05/09/python-tkinter-demo/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"null"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2016/04/17/tools-atom-plugins/" title="上一篇: atom编辑器常用插件">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2016/05/09/python-tkinter-komponents-one/" title="下一篇: python模块tkinter的常用控件1">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/04/06/tools-github-demo/">开源项目托管GitHub入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/06/tools-git-demo/">本地仓库管理Git入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/28/nodejs-http-request/">nodejs用superagent发http请求</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/15/c-and-ppm-two/">用c语言画ppm图片（二）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/14/c-and-ppm-one/">用c语言画ppm图片（一）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/20/java-http-request/">java发起http请求</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/26/nginx-on-ubuntu-one/">Nginx在Ubuntu上的基本知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/26/nginx-on-ubuntu-two/">Ubuntu上配置Nginx服务器</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/02/php-upload-download/">php简单文件上传和下载</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/02/android-webview-demo/">android的webview和back键</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/30/nodejs-mysql-connection/">nodejs操作mysql</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/30/java-mysql-connection/">java操作mysql</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/29/python-mysql-connection/">python连接mysql</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-events/">python模块tkinter的events</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-widget/">python模块tkinter的widget讲解</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-menu/">python-tkinter-menu</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-images/">python模块tkinter的图片运用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-variables/">python模块tkinter的variable</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-window-methods/">python模块tkinter的window-methods</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-komponent-methods/">python模块tkinter的komponent-methods</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-komponent-canvas/">python-tkinter-komponent-canvas</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-komponents-two/">python模块tkinter的常用控件2</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/09/python-tkinter-komponents-one/">python模块tkinter的常用控件1</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/09/python-tkinter-demo/">用python的tkinter模块开发桌面应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/17/tools-atom-plugins/">atom编辑器常用插件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/17/nodejs-amazing-projects/">12个令人惊讶的NodeJS开源项目</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/17/tools-nwjs-package/">nwjs项目package.json文件详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/17/tools-nwjs-demo/">nwjs快速入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/17/tools-cordova-demo/">cordova快速入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/17/nodejs-express-demo/">expressjs框架的安装和使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/06/react-webpack-babel/">react-webpack-babel环境搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/21/nodejs-npm-demo/">Node.js安装和NPM包管理器使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/01/tools-hexo-demo/">built a personal blog with hexo</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2017 John Doe
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >海贼到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>

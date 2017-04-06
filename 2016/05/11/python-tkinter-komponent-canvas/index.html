@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>python-tkinter-komponent-canvas | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="原文 1. Canvas12345678910canvas = tkinter.Canvas(root, height = 300, width = 300)canvas.pack()canvas.create_line(    0,    0,    200,    200,    fill = &quot;red&quot;,    dash = (4,4)) 2. tags of canvas123456# t">
+<meta name="keywords" content="python,tkinter">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python-tkinter-komponent-canvas">
+<meta property="og:url" content="http://yoursite.com/2016/05/11/python-tkinter-komponent-canvas/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="原文 1. Canvas12345678910canvas = tkinter.Canvas(root, height = 300, width = 300)canvas.pack()canvas.create_line(    0,    0,    200,    200,    fill = &quot;red&quot;,    dash = (4,4)) 2. tags of canvas123456# t">
+<meta property="og:image" content="http://file06.16sucai.com/2016/0420/14631aab0012269997725837021a1d7c.jpg">
+<meta property="og:updated_time" content="2017-04-03T06:17:55.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python-tkinter-komponent-canvas">
+<meta name="twitter:description" content="原文 1. Canvas12345678910canvas = tkinter.Canvas(root, height = 300, width = 300)canvas.pack()canvas.create_line(    0,    0,    200,    200,    fill = &quot;red&quot;,    dash = (4,4)) 2. tags of canvas123456# t">
+<meta name="twitter:image" content="http://file06.16sucai.com/2016/0420/14631aab0012269997725837021a1d7c.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">John Doe</a></h1>
+        </hgroup>
+
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/Home">博客首页</a></li>
+                        
+                            <li><a href="/works">作品展示</a></li>
+                        
+                            <li><a href="/about">留言打卡</a></li>
+                        
+                            <li><a href="/FrontEndGuide">前端导航</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=PAkNDgsKBQ4MCnxNTRJfU1E" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/luuman" title="github">github</a>
+                            
+                                <a class="fl zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+                            
+                                <a class="fl weibo" target="_blank" href="#" title="weibo">weibo</a>
+                            
+                                <a class="fl google" target="_blank" href="#" title="google">google</a>
+                            
+                                <a class="fl twitter" target="_blank" href="#" title="twitter">twitter</a>
+                            
+                                <a class="fl linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/Nginx/" style="font-size: 12px;">Nginx</a> <a href="/tags/NodeJS/" style="font-size: 10px;">NodeJS</a> <a href="/tags/Ubuntu/" style="font-size: 12px;">Ubuntu</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/atom/" style="font-size: 10px;">atom</a> <a href="/tags/babel/" style="font-size: 10px;">babel</a> <a href="/tags/c/" style="font-size: 12px;">c</a> <a href="/tags/cordova/" style="font-size: 10px;">cordova</a> <a href="/tags/expressjs/" style="font-size: 10px;">expressjs</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/http/" style="font-size: 12px;">http</a> <a href="/tags/image/" style="font-size: 12px;">image</a> <a href="/tags/java/" style="font-size: 14px;">java</a> <a href="/tags/mysql/" style="font-size: 14px;">mysql</a> <a href="/tags/nodejs/" style="font-size: 16px;">nodejs</a> <a href="/tags/nwjs/" style="font-size: 12px;">nwjs</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/reactjs/" style="font-size: 10px;">reactjs</a> <a href="/tags/tkinter/" style="font-size: 18px;">tkinter</a> <a href="/tags/tools/" style="font-size: 18px;">tools</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://luuman.github.io/">name</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">纯海迷、爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更爱游离于错综复杂的编码与逻辑中</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">John Doe</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">John Doe</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/Home">博客首页</a></li>
+                
+                    <li><a href="/works">作品展示</a></li>
+                
+                    <li><a href="/about">留言打卡</a></li>
+                
+                    <li><a href="/FrontEndGuide">前端导航</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=PAkNDgsKBQ4MCnxNTRJfU1E" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/luuman" title="github">github</a>
+                    
+                        <a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+                    
+                        <a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+                    
+                        <a class="google" target="_blank" href="#" title="google">google</a>
+                    
+                        <a class="twitter" target="_blank" href="#" title="twitter">twitter</a>
+                    
+                        <a class="linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-python-tkinter-komponent-canvas" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/11/python-tkinter-komponent-canvas/" class="article-date">
+      <time datetime="2016-05-11T04:10:21.000Z" itemprop="datePublished">2016-05-11</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      python-tkinter-komponent-canvas
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/python/">python</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tkinter/">tkinter</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><img src="http://file06.16sucai.com/2016/0420/14631aab0012269997725837021a1d7c.jpg" alt="demo"><br><a href="http://effbot.org/tkinterbook/tkinter-index.htm" target="_blank" rel="external">原文</a></p>
+<h2 id="1-Canvas"><a href="#1-Canvas" class="headerlink" title="1. Canvas"></a>1. Canvas</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">canvas = tkinter.Canvas(root, height = <span class="number">300</span>, width = <span class="number">300</span>)</div><div class="line">canvas.pack()</div><div class="line">canvas.create_line(</div><div class="line">    <span class="number">0</span>,</div><div class="line">    <span class="number">0</span>,</div><div class="line">    <span class="number">200</span>,</div><div class="line">    <span class="number">200</span>,</div><div class="line">    fill = <span class="string">"red"</span>,</div><div class="line">    dash = (<span class="number">4</span>,<span class="number">4</span>)</div><div class="line">)</div></pre></td></tr></table></figure>
+<h2 id="2-tags-of-canvas"><a href="#2-tags-of-canvas" class="headerlink" title="2. tags of canvas"></a>2. tags of canvas</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># the tags</span></div><div class="line">item = canvas.create_line(<span class="number">0</span>, <span class="number">0</span>, <span class="number">100</span>, <span class="number">100</span>, tags=<span class="string">"uno"</span>)</div><div class="line">canvas.itemconfig(item, tags=(<span class="string">"one"</span>, <span class="string">"two"</span>))</div><div class="line">canvas.addtag_withtag(<span class="string">"three"</span>, <span class="string">"one"</span>)</div><div class="line">canvas.gettags(item)</div><div class="line">canvas.find_withtag(<span class="string">"one"</span>)</div></pre></td></tr></table></figure>
+<h1 id="3-other-functions"><a href="#3-other-functions" class="headerlink" title="3. other functions"></a>3. other functions</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># other functions</span></div><div class="line">coords(item, *coords)</div><div class="line">create_arc(bbox, **options)</div><div class="line">create_bitmap(position, **options)</div><div class="line">create_image(position, **options)</div><div class="line">create_line(coords, **options)</div><div class="line">create_oval(bbox, **options)</div><div class="line">create_polygon(coords, **options)</div><div class="line">create_rectangle(bbox, **options)</div><div class="line">create_text(position, **options)</div><div class="line">create_window(position, **options)</div><div class="line">dchars(item, <span class="keyword">from</span>, to=<span class="keyword">None</span>)</div><div class="line">delete(item)</div><div class="line">dtag(item, tag=<span class="keyword">None</span>)</div><div class="line">find_above(item)</div><div class="line">find_all()</div><div class="line">find_below(item)</div><div class="line">find_closest(x, y, halo=<span class="keyword">None</span>, start=<span class="keyword">None</span>)</div><div class="line">find_enclosed(x1, y1, x2, y2)</div><div class="line">find_overlapping(x1, y1, x2, y2)</div><div class="line">find_withtag(item)</div><div class="line">focus(item=<span class="keyword">None</span>)</div><div class="line">gettags(item)</div><div class="line">icursor(item, index)</div><div class="line">index(item, index)</div><div class="line">insert(item, index, text)</div><div class="line">itemcget(item, option)</div><div class="line">itemconfig(item, **options)</div><div class="line">itemconfigure(item, **options)</div><div class="line">lift(item, **options)</div><div class="line">lower(item, **options)</div><div class="line">move(item, dx, dy)</div><div class="line">postscript(**options)</div><div class="line">scale(self, xscale, yscale, xoffset, yoffset)</div><div class="line">scan_dragto(x, y)</div><div class="line">scan_mark(x, y)</div><div class="line">select_adjust(item, index)</div><div class="line">select_clear()</div><div class="line">select_from(item, index)</div><div class="line">select_item()</div><div class="line">select_to(item, index)</div><div class="line">tag_bind(item, event=<span class="keyword">None</span>, callback, add=<span class="keyword">None</span>)</div><div class="line">tag_lower(item)</div><div class="line">tag_raise(item)</div><div class="line">tag_unbind(self, item, event)</div><div class="line">tkraise(item, **options)</div><div class="line">xview(how, *args)</div><div class="line">xview_moveto(fraction)</div><div class="line">xview_scroll(number, what)</div><div class="line">yview(how, *args)</div><div class="line">yview_moveto(fraction)</div><div class="line">yview_scroll(number, what)</div></pre></td></tr></table></figure>
+
+      
+      
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang" title="打赏，支持一下">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()" title="关闭">×</a>
+            <div class="shang_tit">
+              <p>纯属好玩</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+            </div>
+              <div class="pay_explain">扫码打赏，你说多少就多少</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝" /></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixin.png" alt="微信" /></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/05/11/python-tkinter-komponent-canvas/">python-tkinter-komponent-canvas</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 John Doe 的个人博客">John Doe</a></p>
+        <p><span>发布时间:</span>2016年05月11日 - 12时10分</p>
+        <p><span>最后更新:</span>2017年04月03日 - 14时17分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/05/11/python-tkinter-komponent-canvas/" title="python-tkinter-komponent-canvas">http://yoursite.com/2016/05/11/python-tkinter-komponent-canvas/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/05/11/python-tkinter-komponent-canvas/　　作者: John Doe" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2016/05/11/python-tkinter-komponents-two/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          python模块tkinter的常用控件2
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/05/11/python-tkinter-komponent-methods/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python模块tkinter的komponent-methods</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Canvas"><span class="toc-number">1.</span> <span class="toc-text">1. Canvas</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-tags-of-canvas"><span class="toc-number">2.</span> <span class="toc-text">2. tags of canvas</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-other-functions"><span class="toc-number"></span> <span class="toc-text">3. other functions</span></a>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2016/05/11/python-tkinter-komponent-canvas/" data-title="python-tkinter-komponent-canvas" data-url="http://yoursite.com/2016/05/11/python-tkinter-komponent-canvas/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"null"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2016/05/11/python-tkinter-komponents-two/" title="上一篇: python模块tkinter的常用控件2">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2016/05/11/python-tkinter-komponent-methods/" title="下一篇: python模块tkinter的komponent-methods">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/04/06/tools-github-demo/">开源项目托管GitHub入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/06/tools-git-demo/">本地仓库管理Git入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/28/nodejs-http-request/">nodejs用superagent发http请求</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/15/c-and-ppm-two/">用c语言画ppm图片（二）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/14/c-and-ppm-one/">用c语言画ppm图片（一）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/20/java-http-request/">java发起http请求</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/26/nginx-on-ubuntu-one/">Nginx在Ubuntu上的基本知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/26/nginx-on-ubuntu-two/">Ubuntu上配置Nginx服务器</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/02/php-upload-download/">php简单文件上传和下载</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/02/android-webview-demo/">android的webview和back键</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/30/nodejs-mysql-connection/">nodejs操作mysql</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/30/java-mysql-connection/">java操作mysql</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/29/python-mysql-connection/">python连接mysql</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-events/">python模块tkinter的events</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-widget/">python模块tkinter的widget讲解</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-menu/">python-tkinter-menu</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-images/">python模块tkinter的图片运用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-variables/">python模块tkinter的variable</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-window-methods/">python模块tkinter的window-methods</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-komponent-methods/">python模块tkinter的komponent-methods</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-komponent-canvas/">python-tkinter-komponent-canvas</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-komponents-two/">python模块tkinter的常用控件2</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/09/python-tkinter-komponents-one/">python模块tkinter的常用控件1</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/09/python-tkinter-demo/">用python的tkinter模块开发桌面应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/17/tools-atom-plugins/">atom编辑器常用插件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/17/nodejs-amazing-projects/">12个令人惊讶的NodeJS开源项目</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/17/tools-nwjs-package/">nwjs项目package.json文件详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/17/tools-nwjs-demo/">nwjs快速入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/17/tools-cordova-demo/">cordova快速入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/17/nodejs-express-demo/">expressjs框架的安装和使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/06/react-webpack-babel/">react-webpack-babel环境搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/21/nodejs-npm-demo/">Node.js安装和NPM包管理器使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/01/tools-hexo-demo/">built a personal blog with hexo</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2017 John Doe
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >海贼到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>

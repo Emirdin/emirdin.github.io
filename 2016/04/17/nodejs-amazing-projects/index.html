@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>12个令人惊讶的NodeJS开源项目 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="在几年的时间里，NodeJS逐渐发展成一个成熟的开发平台，吸引了许多开发者。有许多大型高流量网站都采用NodeJS进行开发，像PayPal，此外，开发人员还可以使用它来开发一些快速移动Web框架。 除了Web应用外，NodeJS也被应用在许多方面，本文盘点了NodeJS在其它方面所开发的十大令人神奇的项目，这些项目涉及到应用程序监控、媒体流、远程控制、桌面和移动应用等等。  1.NodeOSN">
+<meta name="keywords" content="NodeJS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="12个令人惊讶的NodeJS开源项目">
+<meta property="og:url" content="http://yoursite.com/2016/04/17/nodejs-amazing-projects/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="在几年的时间里，NodeJS逐渐发展成一个成熟的开发平台，吸引了许多开发者。有许多大型高流量网站都采用NodeJS进行开发，像PayPal，此外，开发人员还可以使用它来开发一些快速移动Web框架。 除了Web应用外，NodeJS也被应用在许多方面，本文盘点了NodeJS在其它方面所开发的十大令人神奇的项目，这些项目涉及到应用程序监控、媒体流、远程控制、桌面和移动应用等等。  1.NodeOSN">
+<meta property="og:image" content="http://file02.16sucai.com/d/file/2014/0725/7bf3f46354a311ae0ee51fc4f9ff010d.jpg">
+<meta property="og:updated_time" content="2017-04-03T06:17:55.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="12个令人惊讶的NodeJS开源项目">
+<meta name="twitter:description" content="在几年的时间里，NodeJS逐渐发展成一个成熟的开发平台，吸引了许多开发者。有许多大型高流量网站都采用NodeJS进行开发，像PayPal，此外，开发人员还可以使用它来开发一些快速移动Web框架。 除了Web应用外，NodeJS也被应用在许多方面，本文盘点了NodeJS在其它方面所开发的十大令人神奇的项目，这些项目涉及到应用程序监控、媒体流、远程控制、桌面和移动应用等等。  1.NodeOSN">
+<meta name="twitter:image" content="http://file02.16sucai.com/d/file/2014/0725/7bf3f46354a311ae0ee51fc4f9ff010d.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">John Doe</a></h1>
+        </hgroup>
+
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/Home">博客首页</a></li>
+                        
+                            <li><a href="/works">作品展示</a></li>
+                        
+                            <li><a href="/about">留言打卡</a></li>
+                        
+                            <li><a href="/FrontEndGuide">前端导航</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=PAkNDgsKBQ4MCnxNTRJfU1E" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/luuman" title="github">github</a>
+                            
+                                <a class="fl zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+                            
+                                <a class="fl weibo" target="_blank" href="#" title="weibo">weibo</a>
+                            
+                                <a class="fl google" target="_blank" href="#" title="google">google</a>
+                            
+                                <a class="fl twitter" target="_blank" href="#" title="twitter">twitter</a>
+                            
+                                <a class="fl linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/Nginx/" style="font-size: 12px;">Nginx</a> <a href="/tags/NodeJS/" style="font-size: 10px;">NodeJS</a> <a href="/tags/Ubuntu/" style="font-size: 12px;">Ubuntu</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/atom/" style="font-size: 10px;">atom</a> <a href="/tags/babel/" style="font-size: 10px;">babel</a> <a href="/tags/c/" style="font-size: 12px;">c</a> <a href="/tags/cordova/" style="font-size: 10px;">cordova</a> <a href="/tags/expressjs/" style="font-size: 10px;">expressjs</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/http/" style="font-size: 12px;">http</a> <a href="/tags/image/" style="font-size: 12px;">image</a> <a href="/tags/java/" style="font-size: 14px;">java</a> <a href="/tags/mysql/" style="font-size: 14px;">mysql</a> <a href="/tags/nodejs/" style="font-size: 16px;">nodejs</a> <a href="/tags/nwjs/" style="font-size: 12px;">nwjs</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/reactjs/" style="font-size: 10px;">reactjs</a> <a href="/tags/tkinter/" style="font-size: 18px;">tkinter</a> <a href="/tags/tools/" style="font-size: 18px;">tools</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://luuman.github.io/">name</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">纯海迷、爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更爱游离于错综复杂的编码与逻辑中</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">John Doe</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">John Doe</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/Home">博客首页</a></li>
+                
+                    <li><a href="/works">作品展示</a></li>
+                
+                    <li><a href="/about">留言打卡</a></li>
+                
+                    <li><a href="/FrontEndGuide">前端导航</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=PAkNDgsKBQ4MCnxNTRJfU1E" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/luuman" title="github">github</a>
+                    
+                        <a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+                    
+                        <a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+                    
+                        <a class="google" target="_blank" href="#" title="google">google</a>
+                    
+                        <a class="twitter" target="_blank" href="#" title="twitter">twitter</a>
+                    
+                        <a class="linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-nodejs-amazing-projects" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/17/nodejs-amazing-projects/" class="article-date">
+      <time datetime="2016-04-16T18:35:42.000Z" itemprop="datePublished">2016-04-17</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      12个令人惊讶的NodeJS开源项目
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/nodejs/">nodejs</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NodeJS/">NodeJS</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><img src="http://file02.16sucai.com/d/file/2014/0725/7bf3f46354a311ae0ee51fc4f9ff010d.jpg" alt="demo"></p>
+<hr>
+<p>在几年的时间里，NodeJS逐渐发展成一个成熟的开发平台，吸引了许多开发者。有许多大型高流量网站都采用NodeJS进行开发，像PayPal，此外，开发人员还可以使用它来开发一些快速移动Web框架。</p>
+<p>除了Web应用外，NodeJS也被应用在许多方面，本文盘点了NodeJS在其它方面所开发的十大令人神奇的项目，这些项目涉及到应用程序监控、媒体流、远程控制、桌面和移动应用等等。</p>
+<hr>
+<h2 id="1-NodeOS"><a href="#1-NodeOS" class="headerlink" title="1.NodeOS"></a>1.NodeOS</h2><p>NodeOS是采用NodeJS开发的一款友好的操作系统，该操作系统是完全建立在Linux内核之上的，并且采用shell和NPM进行包管理，采用NodeJS不仅可以很好地进行包管理，还可以很好的管理脚本、接口等。目前，Docker和Vagrant都是采用NodeOS的首个版本进行构建的。</p>
+<p>NodeJS无所不能：细数12个令人惊讶的NodeJS开源项目 - kompasim - kompasim的博客</p>
+<hr>
+<h2 id="2-Noduino"><a href="#2-Noduino" class="headerlink" title="2.Noduino"></a>2.Noduino</h2><p>许多硬件黑客希望通过Web页面即可控制他们的Arduino，Noduino就是这样的一个项目，一个简单灵活的JavaScript和NodeJS框架，通过使用HTML5、Socket.IO和NodeJS的Web应用来控制Arduino。目前，该项目刚刚启动，支持一些常用功能，比如从Arduino中捕获事件（例如点击按钮）等。</p>
+<p>NodeJS无所不能：细数12个令人惊讶的NodeJS开源项目 - kompasim - kompasim的博客</p>
+<hr>
+<h2 id="3-Node-WebKit"><a href="#3-Node-WebKit" class="headerlink" title="3.Node-WebKit"></a>3.Node-WebKit</h2><p>Node-Webkit是一个基于Chromium与NodeJS的应用程序运行器，允许开发者使用Web技术编写桌面应用。它是NodeJS与WebKit技术的融合，提供一个跨Windows、Linux平台的客户端应用开发的底层框架。</p>
+<p>跨平台开发并非易事，其中一种方式便是使用Web技术和Node-Webkit开发桌面应用来代替那些庞大且笨重的开发框架。</p>
+<p>NodeJS无所不能：细数12个令人惊讶的NodeJS开源项目 - kompasim - kompasim的博客</p>
+<hr>
+<h2 id="4-PDFKit"><a href="#4-PDFKit" class="headerlink" title="4.PDFKit"></a>4.PDFKit</h2><p>PDFKit是采用NodeJS开发的一款PDF文档生成库，它使用一个“HTML5 canvas-like API”来创建矢量图形和字体嵌入，并且支持许多标准的PDF功能，如文件的安全性、表的创建、文本换行、项目符号、高亮提示、注释等PDF功能。</p>
+<p>注意，PDFKit是一款PDF生成工具，而不是一个文档转换系统。如果你想对现有的PDF文档进行操作，你可以使用另一个NodeJS项目—— Scissors。</p>
+<p>NodeJS无所不能：细数12个令人惊讶的NodeJS开源项目 - kompasim - kompasim的博客</p>
+<hr>
+<h2 id="5-Log-io"><a href="#5-Log-io" class="headerlink" title="5.Log.io"></a>5.Log.io</h2><p>Log.io是一个基于NodeJS开发的实时日志监控项目，在浏览器里访问。需要注意的是，Log.io只监视日志变动并不存储日志，不过这个没关系，只要知道日志存储在哪个机器上。</p>
+<p>Log.io使用 Socket.io库发送活动报告的，和其他的监控工具一样，Log.io也采用服务器－客户端的模式。Log.io由两部分组成：server和harveste，server运行在机器 A（服务器）上监视和纪录其他机器发来的日志消息；log harvester 运行在机器 B（客户端）上用来监听和收集机器 B上的日志改动，并将改动发送给机器 A，每个需要纪录日志的机器都需要一个harvester。</p>
+<p>NodeJS无所不能：细数12个令人惊讶的NodeJS开源项目 - kompasim - kompasim的博客</p>
+<hr>
+<h2 id="6-Nodecast或Leapcast"><a href="#6-Nodecast或Leapcast" class="headerlink" title="6.Nodecast或Leapcast"></a>6.Nodecast或Leapcast</h2><p>受谷歌Chromecast技术的启发，开发者使用NodeJS开发出不少Chromecast仿真应用。如Nodecast或Leapcast。在PC上运行Nodecast或Leapcast，启动移动设备，选择一个支持Chromecast的应用程序，然后你就可以把移动广播上的内容映射到电脑上了，把电脑当成一个流媒体使用。</p>
+<p>在这两个应用中，Nodecast比较简单些，但相应的功能也比较少，它仅经过了YouTube和Google Music的测试（ DEMO）。注意，大家不要把Nodecast与 Nodecast库混淆，后者使用DIAL发现协议提供链接设备（类似Chromecast）。</p>
+<p>NodeJS无所不能：细数12个令人惊讶的NodeJS开源项目 - kompasim - kompasim的博客</p>
+<hr>
+<h2 id="7-Nexe"><a href="#7-Nexe" class="headerlink" title="7.Nexe"></a>7.Nexe</h2><p>Nexe是一款小巧却非常实用的NodeJS工具，它可以为NodeJS应用创建单一可执行的文件，并且无需安装运行时，这样，一些非技术终端的用户就无需变动NodeJS应用的所有依赖程序。如果你想发布一个NodeJS应用程序，并且没有GUI，Nexe则是您的最佳选择。目前该应用程序的一个弊端是不能在Windows平台上工作，只适用于Linux和Mac OS X平台，并且它也不支持本地NodeJS模块。</p>
+<p>NodeJS无所不能：细数12个令人惊讶的NodeJS开源项目 - kompasim - kompasim的博客</p>
+<hr>
+<h2 id="8-Hyro"><a href="#8-Hyro" class="headerlink" title="8.Hyro"></a>8.Hyro</h2><p>Hyro是使用NodeJS开发的一款实时HTML5编辑器，如下图所示，左边显示HTML源码，右边显示内容。语法高亮由 CodeMirror提供。Hyro并不打算成为一款成熟的Web IDE，更像是一款轻量级的HTML或CSS记事本。</p>
+<p>NodeJS无所不能：细数12个令人惊讶的NodeJS开源项目 - kompasim - kompasim的博客</p>
+<hr>
+<h2 id="9-Haroopad"><a href="#9-Haroopad" class="headerlink" title="9.Haroopad"></a>9.Haroopad</h2><p>Haroopad是一款Linux上的markdown编辑器，使用Chromium作为UI，支持Windows、Mac OS X和Linux。主题样式丰富，语法标亮支持54种编程语言。 如下图所示，一边是代码编辑窗口，一边是预览窗口，可以实时更新。其邮件导出功能可以将文档发送到Tumblr和Evernote。</p>
+<p>NodeJS无所不能：细数12个令人惊讶的NodeJS开源项目 - kompasim - kompasim的博客</p>
+<hr>
+<h2 id="10-TiddlyWiki5"><a href="#10-TiddlyWiki5" class="headerlink" title="10.TiddlyWiki5"></a>10.TiddlyWiki5</h2><p>TiddlyWiki是一款交互式的wiki，非常灵活，它也可以在浏览器里作为单一的HTML文件或者是一款功能强大的NodeJS应用程序。</p>
+<p>TiddlyWiki5是全新设计的5.0版本，它可以直接集成NodeJS解锁一系列的功能，但在单机模式下是不可用的。目前，TiddlyWiki5仍处于测试阶段。</p>
+<p>NodeJS无所不能：细数12个令人惊讶的NodeJS开源项目 - kompasim - kompasim的博客</p>
+<p>来自： InfoWorld</p>
+<hr>
+<h2 id="11-express"><a href="#11-express" class="headerlink" title="11.express"></a>11.express</h2><p>Express 是一个基于 Node.js 平台的极简、灵活的 web 应用开发框架，它提供一系列强大的特性，帮助你创建各种 Web 和移动设备应用。</p>
+<hr>
+<h2 id="12-phonegap"><a href="#12-phonegap" class="headerlink" title="12.phonegap"></a>12.phonegap</h2><p>phonegap是一个跨平台的移动app开发框架，可以把html css js写的页面打包成跨平台的可以安装的移动app，并且可以调用原生的几乎所有的功能，比如摄像头，联系人，加速度等。</p>
+
+      
+      
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang" title="打赏，支持一下">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()" title="关闭">×</a>
+            <div class="shang_tit">
+              <p>纯属好玩</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+            </div>
+              <div class="pay_explain">扫码打赏，你说多少就多少</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝" /></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixin.png" alt="微信" /></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/04/17/nodejs-amazing-projects/">12个令人惊讶的NodeJS开源项目</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 John Doe 的个人博客">John Doe</a></p>
+        <p><span>发布时间:</span>2016年04月17日 - 02时35分</p>
+        <p><span>最后更新:</span>2017年04月03日 - 14时17分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/04/17/nodejs-amazing-projects/" title="12个令人惊讶的NodeJS开源项目">http://yoursite.com/2016/04/17/nodejs-amazing-projects/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/04/17/nodejs-amazing-projects/　　作者: John Doe" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2016/04/17/tools-nwjs-package/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          nwjs项目package.json文件详解
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/04/17/tools-atom-plugins/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">atom编辑器常用插件</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-NodeOS"><span class="toc-number">1.</span> <span class="toc-text">1.NodeOS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Noduino"><span class="toc-number">2.</span> <span class="toc-text">2.Noduino</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Node-WebKit"><span class="toc-number">3.</span> <span class="toc-text">3.Node-WebKit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-PDFKit"><span class="toc-number">4.</span> <span class="toc-text">4.PDFKit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Log-io"><span class="toc-number">5.</span> <span class="toc-text">5.Log.io</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Nodecast或Leapcast"><span class="toc-number">6.</span> <span class="toc-text">6.Nodecast或Leapcast</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-Nexe"><span class="toc-number">7.</span> <span class="toc-text">7.Nexe</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-Hyro"><span class="toc-number">8.</span> <span class="toc-text">8.Hyro</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-Haroopad"><span class="toc-number">9.</span> <span class="toc-text">9.Haroopad</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-TiddlyWiki5"><span class="toc-number">10.</span> <span class="toc-text">10.TiddlyWiki5</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-express"><span class="toc-number">11.</span> <span class="toc-text">11.express</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-phonegap"><span class="toc-number">12.</span> <span class="toc-text">12.phonegap</span></a></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2016/04/17/nodejs-amazing-projects/" data-title="12个令人惊讶的NodeJS开源项目" data-url="http://yoursite.com/2016/04/17/nodejs-amazing-projects/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"null"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2016/04/17/tools-nwjs-package/" title="上一篇: nwjs项目package.json文件详解">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2016/04/17/tools-atom-plugins/" title="下一篇: atom编辑器常用插件">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/04/06/tools-github-demo/">开源项目托管GitHub入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/06/tools-git-demo/">本地仓库管理Git入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/28/nodejs-http-request/">nodejs用superagent发http请求</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/15/c-and-ppm-two/">用c语言画ppm图片（二）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/14/c-and-ppm-one/">用c语言画ppm图片（一）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/20/java-http-request/">java发起http请求</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/26/nginx-on-ubuntu-one/">Nginx在Ubuntu上的基本知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/26/nginx-on-ubuntu-two/">Ubuntu上配置Nginx服务器</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/02/php-upload-download/">php简单文件上传和下载</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/02/android-webview-demo/">android的webview和back键</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/30/nodejs-mysql-connection/">nodejs操作mysql</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/30/java-mysql-connection/">java操作mysql</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/29/python-mysql-connection/">python连接mysql</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-events/">python模块tkinter的events</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-widget/">python模块tkinter的widget讲解</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-menu/">python-tkinter-menu</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-images/">python模块tkinter的图片运用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-variables/">python模块tkinter的variable</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-window-methods/">python模块tkinter的window-methods</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-komponent-methods/">python模块tkinter的komponent-methods</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-komponent-canvas/">python-tkinter-komponent-canvas</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/python-tkinter-komponents-two/">python模块tkinter的常用控件2</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/09/python-tkinter-komponents-one/">python模块tkinter的常用控件1</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/09/python-tkinter-demo/">用python的tkinter模块开发桌面应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/17/tools-atom-plugins/">atom编辑器常用插件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/17/nodejs-amazing-projects/">12个令人惊讶的NodeJS开源项目</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/17/tools-nwjs-package/">nwjs项目package.json文件详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/17/tools-nwjs-demo/">nwjs快速入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/17/tools-cordova-demo/">cordova快速入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/17/nodejs-express-demo/">expressjs框架的安装和使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/06/react-webpack-babel/">react-webpack-babel环境搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/21/nodejs-npm-demo/">Node.js安装和NPM包管理器使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/01/tools-hexo-demo/">built a personal blog with hexo</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2017 John Doe
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >海贼到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>
